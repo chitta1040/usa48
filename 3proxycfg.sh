@@ -42,7 +42,7 @@ done
 # echo "flush"
 # echo "allow * * * *"
 
-# port=30000
+# port=10000
 # count=1
 # for i in `cat ip.list`; do
 #     echo "socks -6 -p$port  -i127.0.0.1 -e$i"
