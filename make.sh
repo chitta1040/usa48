@@ -13,7 +13,7 @@ fi
 #{	IP4=$(curl -4 -s icanhazip.com)
 	IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 	vPrefix = IP6
-	VIp = IP4
+	vIp = IP4
 	#read -r -p "What is your IPv6 prefix? eg:(2604:180:2:11c7) " vPrefix
 	#read -r -p "VPS IP: " vIp
 	echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
