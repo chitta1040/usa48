@@ -76,7 +76,7 @@
 
   for i in `cat ip.list`; do
       #echo "ifconfig eth0 inet6 add $i/64"
-      ifconfig eth0 inet6 add $i/48 # Если сеть 64 то $i/64 если 48 то $i/48
+      ifconfig eth0 inet6 add $i/64 # Если сеть 64 то $i/64 если 48 то $i/48
   done
 
 
