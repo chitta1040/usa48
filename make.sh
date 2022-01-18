@@ -10,9 +10,13 @@ if [ "x$(id -u)" != 'x0' ]; then
 fi
 
 #function StartTheProcess()
-#{
-	read -r -p "What is your IPv6 prefix? eg:(2604:180:2:11c7) " vPrefix
-	read -r -p "VPS IP: " vIp
+#{	IP4=$(curl -4 -s icanhazip.com)
+	IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
+	vPrefix = IP6
+	VIp = IP4
+	#read -r -p "What is your IPv6 prefix? eg:(2604:180:2:11c7) " vPrefix
+	#read -r -p "VPS IP: " vIp
+	echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 	read -r -p "Quantity IP for generate: " vCount
 	read -r -p "IP who get access to this Proxies: " vIp2
 	
