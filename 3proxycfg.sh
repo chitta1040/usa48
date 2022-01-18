@@ -24,7 +24,7 @@ echo "allow * 1.4.8.8"
 #echo "flush"
 #echo "allow * * * *"
 
-port=30000
+port=10000
 count=1
 for i in `cat ip.list`; do
     echo "proxy -6 -n -a -p$port -i127.0.0.1 -e$i"
