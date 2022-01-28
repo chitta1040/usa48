@@ -52,7 +52,7 @@
       d=${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}
       e=${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}
       
-      echo $network:$a:$b:$c:$d >> ip.list #Для /64 сети требуется 4 блока:a, b, c, d #Если сеть /48, то 5 блоков, то есть + e блок через двоеточие
+      echo $network:$a:$b:$c:$d:$e >> ip.list #Для /64 сети требуется 4 блока:a, b, c, d #Если сеть /48, то 5 блоков, то есть + e блок через двоеточие
   }
 
   #echo "$MAXCOUNT случайных IPv6:"
@@ -76,7 +76,7 @@
 
   for i in `cat ip.list`; do
       #echo "ifconfig eth0 inet6 add $i/64"
-      ifconfig eth0 inet6 add $i/64 # Если сеть 64 то $i/64 если 48 то $i/48
+      ifconfig enp1s0f0 inet6 add $i/48 # Если сеть 64 то $i/64 если 48 то $i/48
   done
 
 
