@@ -19,7 +19,7 @@ fi
 	#read -r -p "What is your IPv6 prefix? eg:(2604:180:2:11c7) " vPrefix
 	#read -r -p "VPS IP: " vIp
 	read -r -p "Quantity IP for generate: " vCount
-	read -r -p "IP who get access to this Proxies: " vIp2
+	#read -r -p "IP who get access to this Proxies: " vIp2
 	
 
 	yum -y groupinstall "Development Tools"
