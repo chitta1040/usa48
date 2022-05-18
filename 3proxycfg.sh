@@ -1,7 +1,7 @@
 echo pidfile /root/3proxy/3proxy.pid
 
 echo daemon
-echo maxconn 3333
+echo maxconn 10000
 echo nserver 1.1.1.1
 echo nserver [2606:4700:4700::1111]
 echo nserver [2606:4700:4700::1001]
@@ -17,8 +17,13 @@ echo #allow admin
 
 
 # HTTP(S) прокси
-echo "auth iponly"
-echo "allow * 1.4.8.8"
+#echo "auth iponly"
+#echo "allow * 1.4.8.8"
+echo "auth strong"
+echo "users chittaking:CL:KingChitta"
+echo "allow chittaking"
+echo "flush"
+echo "allow * * * *"
 
 #echo "users user1:CL:user1"
 #echo "flush"
