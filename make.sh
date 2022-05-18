@@ -29,8 +29,8 @@ fi
 	make -f Makefile.Linux
 	ulimit -u unlimited -n 999999 -s 16384
 	
-	wget https://github.com/chitta1040/kools48/raw/master/3proxycfg.sh
-	wget https://github.com/chitta1040/kools48/raw/master/Genips.sh
+	wget https://github.com/chitta1040/usa48/raw/master/3proxycfg.sh
+	wget https://github.com/chitta1040/usa48/raw/master/Genips.sh
 	chmod 0755 Genips.sh
 	chmod 0755 3proxycfg.sh
 	
@@ -117,8 +117,9 @@ fi
   echo ====================================
   echo      Adding IPs to interface: OK!
   echo ====================================
-
+  dcount = 1
   for i in `cat ip.list`; do
+      echo dcount += 1	
       #echo "ifconfig eth0 inet6 add $i/64"
       # Если сеть 64 то $i/64 если 48 то $i/48
       ifconfig em1 inet6 add $i/48
