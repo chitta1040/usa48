@@ -121,7 +121,8 @@ fi
   echo ====================================
   dcount = 1
   for i in `cat ip.list`; do
-      echo dcount += 1	
+      let "dcount += 1"	
+      echo $dcount
       #echo "ifconfig eth0 inet6 add $i/64"
       # Если сеть 64 то $i/64 если 48 то $i/48
       ifconfig em1 inet6 add $i/48
