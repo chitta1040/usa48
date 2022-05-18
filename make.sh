@@ -97,7 +97,7 @@ fi
       d=${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}
       e=${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}${array[$RANDOM%16]}
       echo $network:$a:$b:$c:$d:$e >> ip.list
-      echo $network:$a:$b:$c:$d:$e
+      #echo $network:$a:$b:$c:$d:$e
       #Для /64 сети требуется 4 блока:a, b, c, d #Если сеть /48, то 5 блоков, то есть + e блок через двоеточие
   }
 
